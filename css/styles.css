@@ -1,12 +1,12 @@
-body{
+body {
     background: url(images/imagen\ de\ pica\ y\ fondo\ de\ montañas.webp) no-repeat center fixed;
-    background-size: cover; 
+    background-size: cover;
     font-family: sans-serif;
     margin: 0;
     color: white;
 }
 
-header{
+header {
     display: flex;
     height: 70px;
     align-items: center;
@@ -16,9 +16,9 @@ header{
     background-color: rgba(0, 0, 0, 0.750);
 }
 
-a{
- text-decoration: none;
- color: whitesmoke;
+a {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 nav a {
@@ -27,51 +27,55 @@ nav a {
 
 }
 
-nav a:hover{
+nav a:hover {
     color: black;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img{
+.logo img {
     height: 50px;
     margin-right: 10px;
 }
 
 menu {
-    background-color:rgba(0, 0, 0, 0.750) ;
+    background-color: rgba(0, 0, 0, 0.750);
     text-align: center;
 }
 
-footer{
-    background-color:rgba(0, 0, 0, 0.750) ;
+footer {
+    background-color: rgba(0, 0, 0, 0.750);
     text-align: center;
     font-weight: 600;
     padding-right: 10px;
 }
 
-footer a:hover{
-color: blueviolet;
+footer a:hover {
+    color: blueviolet;
 }
 
-h2{
-    background-color:rgba(0, 0, 0, 0.750) ;
+h2 {
+    background-color: rgba(0, 0, 0, 0.750);
     text-align: left;
 }
 
-.registro{
-    background-color:rgba(0, 0, 0, 0.750) ;
+.registro {
+    background-color: rgba(0, 0, 0, 0.750);
     text-align: left;
 
 }
-.registro input{
+
+.registro input {
     text-align: center;
 }
-.botones{
+
+.botones {
     text-align: left;
 }
-textarea{
+
+textarea {
     font-family: sans-serif;
 }
