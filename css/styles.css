@@ -45,8 +45,40 @@ nav a:hover {
 }
 
 menu {
+    width: 90%;
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.750);
+    border-radius: 20px;
     text-align: center;
+}
+
+.menu__titulo {
+    font-size: 25px;
+    padding: 20px;
+    margin: 20 auto;
+}
+
+.menu__table {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.menu__tr {
+    width: 30%;
+}
+
+.menu__th {
+    width: 30%;
+    padding: 20px 10px;
+}
+
+.imagen {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 footer {
@@ -105,4 +137,16 @@ table {
 
 .wsp:hover {
     background-color: green;
+}
+
+h3 {
+    background-color: rgba(0, 0, 0, 0.750);
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.750);
+    border-radius: 20px;
+    text-align: center;
 }
