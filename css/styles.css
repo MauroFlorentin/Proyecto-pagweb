@@ -39,6 +39,7 @@ nav a:hover {
 .logo img {
     height: 50px;
     margin-right: 10px;
+    opacity: 80%;
 }
 
 menu {
@@ -78,4 +79,28 @@ h2 {
 
 textarea {
     font-family: sans-serif;
+}
+
+table {
+    background-color: rgba(0, 0, 0, 0.750);
+}
+
+.facebook:hover {
+    background-color: #3b5998;
+}
+
+.instagram:hover {
+    background-color: blueviolet;
+}
+
+.twitter:hover {
+    background-color: black;
+}
+
+.youtube:hover {
+    background-color: red;
+}
+
+.wsp:hover {
+    background-color: green;
 }
