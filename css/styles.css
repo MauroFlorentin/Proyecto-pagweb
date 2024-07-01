@@ -5,12 +5,7 @@
 }
 
 /* ================== custom property FIN =============================== */
-/* Definimos un ancho para darle siempre el mismo aspecto a la pagina */
-.container{
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
+
 /* ================== Header INICIO =============================== */
 header {
     display: flex;
@@ -41,15 +36,6 @@ nav a:hover {
     border-bottom: 2px solid var(--color-fuente);
     padding: 5px;
     border-radius: 2px;
-}
-.nav svg{
-    stroke: rgb(113, 109, 109);    color: rgb(18, 173, 135);
-    text-shadow: 0px 0px 20px rgb(18, 173, 135);
-}
-
-.nav svg:hover{
-    color: rgb(18, 173, 135);
-    text-shadow: 0px 0px 20px rgb(18, 173, 135);
 }
 
 .logo {
@@ -87,7 +73,6 @@ body {
     color: white;
 }
 
-
 /* ================== Fondo FIN =============================== */
 
 /* ================== TITULOS =============================== */
@@ -100,12 +85,43 @@ h3 {
     width: 90%;
     margin: 0 auto;
     background-color: var(--color-fondo);
-    border-radius: 20px;
+    border-radius: 5px;
     text-align: center;
 }
 
+.atico-titulo {
+    width: 35%;
+
+}
+
+.atico-titulo-2 {
+    width: 70%;
+}
+
+.atico-titulo-3 {
+    width: 70%;
+}
+
+
+
 /* ================== TITULOS fin =============================== */
 
+
+/* ================== TITULOS INICIO CONTACTANOS =============================== */
+
+.titulo-ubicacion {
+    width: 40%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background: none;
+
+}
+
+
+
+/* ================== TITULOS fin =============================== */
+
+/* ================== productos INICIO =============================== */
 menu {
     width: 90%;
     margin: 0 auto;
@@ -114,287 +130,18 @@ menu {
     text-align: center;
 }
 
-section {
-    width: 90%;
-    margin: 0 auto;
-    background-color: var(--color-fondo);
-    border-radius: 20px;
-    text-align: center;
-    padding: 10px;
+.menu__titulo {
+    font-size: 25px;
+    padding: 20px;
+    margin: 20px auto;
 }
 
-/* ============================= BUSQUEDA - INICIO ===================================== */
-/* Seccion del buscador, por el momento es solo un elemento, en otra version quizas a la izquierda se agregue un filtro para la busqueda */
-.search{
-    height: 60px;
-    margin: 15px auto;
-    border-bottom: 1px solid black;
-}
-
-.search__container{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-/* Para poder hacerlo visualmente mejor, en versiones medianas y pequeñas se centra. */
-@media screen and (max-width: 768px){
-    .search__container{
-        justify-content: center;
-    }
-}
-
-.search__into{
-    display: flex;
-    align-items: center;
-    padding: 4px 15px;
-    border-radius: 8px;
-    background-color: rgb(232, 239, 245);
-}
-
-@media screen and (max-width: 768px){
-    .search__into{
-        /* Para generar una buena experiencia de usuario en tamaños medianos y pequeños se agranda el tamaño */
-        width: 90%;
-    }
-}
-
-.search__input{
-    width: 100%;
-    margin-left: 5px;
-    border: none;
-    background-color: rgb(232, 239, 245);
-    padding: 10px 5px;
-    
-}
-/* Sacamos el focus del search para que no sea chocante al momento de seleccionarlo */
-.search__input:focus{
-   outline: none;
-}
-
-/* ============================= BUSQUEDA - FIN ===================================== */
-
-/* ============================= PRODUCTOS - INICIO ===================================== */
-.products{
-    margin: 40px auto;
-}
-
-.cards{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    height: 100%;
-}
-/* le damos estilo a la card con flexbox. */
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    width: 260px;
-    border-radius: 8px;
-    /* Vamos a ocultar lo que sobresale para que no se vea mal */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    /* desplazamos hacia arriba 10 px */
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 0.1px solid #ccc;
-    /* Cuando estamos encima de la card podemos observar todo el contenido, hasta el que se desborda */
-    overflow: visible;
-}
-  
-.sale__price {
-    font-size: 20px;
-    margin-right: 10px;
-}
-  
-.card__background{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #dedada40;
-    height: 300px;
-    /* border-radius: 8px; */
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
-}
-
-/* le damos color y desbordamos contenido cuando pasamos por arriba el mouse */
-.card__background:hover{
-    overflow: visible;
-    background-color: #b2aaaa40;
-}
-
-.card__img{
-    height: 150px;
-    padding: 10px;
-    /* pequeña sombra para la imagen */
-    filter: drop-shadow(2px 2px 8px black);
-    /* propiedad de imagen para acomodarla respecto a su contenedor */
-    object-fit: cover;
-    /* hacemos una pequeña transicion para que el cambio no sea tan brusco */
-    transition: transform 0.3s ease;
-}
-/* escalamos la imagen para que sea la prioridad visual */
-.card:hover .card__img {
-    transform: scale(1.8);
-}
-
-.card__texts{
-    display: flex;
-    height: 250px;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card__name{
-    font-size: 24px;
-    padding: 2px 6px;
-    height: 10px;
-}
-
-.card__description{
-    font-size: 12px;
-    padding: 0 15px;
-    text-align: justify;
-    overflow: hidden;
-    color: whitesmoke;
-    height: 50px;
-}
-
-.card__description:hover{
-    overflow: visible;
-}
-
-.sale{
-    display: flex;
-    align-items: flex-end;
-    margin-top: 5px;
-    justify-content: space-between;
-    padding: 10px 10px;
-    width: 100%;
-}
-
-.sale__price {
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.card:hover .sale__svg {
-    fill: grey;
-}
-
-/* ============================= PRODUCTOS - FIN ===================================== */
-
-
-
-/* ============================= MAPA - INICIO ===================================== */
-
-
-/* ============================= MAPA - FIN ===================================== */
-
-/* ================== contenido de nosotros =============================== */
-.contenido {
-    flex: 90%;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.contenido img {
-    border-radius: 20px;
-    margin-right: 20px;
-    height: 50%;
-
-}
-
-.contenido p {
-    text-align: start;
-    margin: 0%;
-    font-size: x-large;
-}
-
-/* ================== contenido de nosotros fin=============================== */
-
-/* ================== form estilos =============================== */
-.registro {
-    background-color: var(--color-fondo);
-    text-align: center;
-    width: 90%;
+.menu__table {
+    width: 80%;
     margin: 0 auto;
     border-radius: 20px;
-    padding: 10px;
 }
 
-.registro input {
-    text-align: center;
-    border-bottom: 1px solid rgb(18, 173, 135) ;
-    background: none;
-    color: var(--color-fuente);
-}
-
-.registro button {
-    text-align: center;
-    border-bottom: 1px solid rgb(18, 173, 135) ;
-    background: none;
-    color: var(--color-fuente);
-}
-
-.botoncontacto {
-    background-color: var(--color-fondo);
-    padding: .5rem 1.5rem;
-    outline: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    display: block;
-    flex: 0 0 100%;
-    transition: all .3s ease;
-    font-size:xx-large ;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 20px;
-
-}
-.botoncontacto:hover {
-    background-color: rgb(18, 173, 135);
-    cursor: pointer;
-}
-
-.boton:hover {
-    background-color: rgb(18, 173, 135);
-    cursor: pointer;
-
-}
-
-textarea {
-    font-family: sans-serif;
-    background: none;
-    font: var(--color-fuente);
-    color: var(--color-fuente);
-}
-
-/* ================== form estilos fin =============================== */
-
-/* ================== Footer =============================== */
-footer {
-    background-color: var(--color-fondo);
-    text-align: center;
-    font-weight: 600;
-}
-
-#copyright {
-    font-weight: 700;
-}
-
-/* ================== Footer =============================== */
-
-/* ================== tabla show data =============================== */
 table {
     width: 90%;
     margin: 0 auto;
@@ -413,4 +160,150 @@ table td {
     border-style:inset;
     border-radius: 20px;
 }
-/* ================== tabla show data fin =============================== */
+
+.menu__tr {
+    width: 30%;
+
+}
+
+.imagen {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+/* ================== productos FIN =============================== */
+
+/* ================== contenido de nosotros =============================== */
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.contenido img {
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.contenido p {
+    text-align: center;
+    margin: 0%;
+    font-size: x-large;
+}
+.consulta-text {
+    resize: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #d63031;
+    color: aliceblue;
+    margin: 14px;
+    
+}
+
+.consulta-text-2{
+    resize: none;
+    background: none;
+    color: aliceblue;
+
+    
+}
+.envia-consulta{
+    margin-top: 8%;
+    background: none;
+}
+
+
+.boton-formulario {
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(74, 216, 117);
+    
+}
+
+.boton-formulario-2 {
+    padding: 5px;
+    background-color: rgb(159, 226, 226);
+}
+
+/* ================== contenido de nosotros fin=============================== */
+
+/* ================== form estilos =============================== */
+.registro {
+    background-color: var(--color-fondo);
+    text-align: left;
+
+}
+
+.registro input {
+    text-align: center;
+    margin: 1%;
+    margin-left: 8%;
+    background: none;
+    border: none;
+    color: aliceblue;
+    border-bottom: 1px solid #d63031 ;
+    
+}
+
+.botones {
+    text-align: center;
+    
+}
+
+
+textarea {
+    font-family: sans-serif;
+}
+
+.registro-N-C-Ciu {
+    position: relative;
+    left: 8%;
+}
+.registro-numero{
+    position: relative;
+    left: 9%;
+
+}
+
+
+.imput-registro-numero {
+    position: relative;
+    left: 2%;
+}
+
+.imput-registro-calle {
+    position: relative;
+    left: 20px;
+}
+
+/* ================== form estilos fin =============================== */
+
+/* ================== Footer =============================== */
+footer {
+    background-color: var(--color-fondo);
+    text-align: center;
+    font-weight: 600;
+}
+
+.redes a i {
+    margin-right: 1.25rem;
+    font-size: 1.875em;
+    color: var(--color-fuente);
+    transition: all 1s linear 0.5s;
+}
+
+.redes a i:hover {
+    color: rgb(18, 173, 135);
+    transform: scale(1.3);
+    transition: all 1s linear 0.1s;
+}
+
+#copyright {
+    font-weight: 700;
+}
+
+/* ================== Footer =============================== */
